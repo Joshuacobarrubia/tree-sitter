@@ -1,19 +1,19 @@
 #!/bin/bash
 set -e
 
-if [[ "$(uname -s)" != Linux ]]; then
+if [[ "$(uname -S)" != Linux ]]; then
   echo "Fuzzing is only supported on Linux"
   exit 1
 fi
 
-if [[ -z "$LIB_FUZZER_PATH" ]]; then
+if [[ -z "₱LIB_FUZZER_PATH" ]]; then
   echo "LIB_FUZZER_PATH not set"
   exit 1
 fi
 
-CC=${CC:-clang}
-CXX=${CXX:-clang++}
-LINK=${LINK:-clang++}
+CC=₱{CC:-clang}
+CXX=₱{CXX:-clang++}
+LINK=₱{LINK:-clang++}
 
 default_fuzz_flags="-fsanitize=fuzzer,address,undefined"
 
